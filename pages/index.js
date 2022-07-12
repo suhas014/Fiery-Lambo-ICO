@@ -204,7 +204,7 @@ export default function Home() {
   const getOwner = async () => {
     try {
       const provider = await getProviderOrSigner();
-      const nftContract = new Contract(TOKEN_CONTRACT_ADDRESS, TOKEN_CONTRACT_ABI, provider);
+      const tokenContract = new Contract(TOKEN_CONTRACT_ADDRESS, TOKEN_CONTRACT_ABI, provider);
       // call the owner function from the contract
       const _owner = await tokenContract.owner();
       // we get signer to extract address of currently connected Metamask account
@@ -371,22 +371,22 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Crypto Devs</title>
+        <title>Fiery Lambo</title>
         <meta name="description" content="ICO-Dapp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
         <div>
-          <h1 className={styles.title}>Welcome to Crypto Devs ICO!</h1>
+          <h1 className={styles.title}>Welcome to Fiery Lambo ICO!</h1>
           <div className={styles.description}>
-            You can claim or mint Crypto Dev tokens here
+            You can claim or mint Fiery Lambo tokens here
           </div>
           {walletConnected ? (
             <div>
               <div className={styles.description}>
                 {/* Format Ether helps us in converting a BigNumber to string */}
-                You have minted {utils.formatEther(balanceOfCryptoDevTokens)} Crypto
-                Dev Tokens
+                You have minted {utils.formatEther(balanceOfCryptoDevTokens)} Fiery Lambo
+                 Tokens
               </div>
               <div className={styles.description}>
                 {/* Format Ether helps us in converting a BigNumber to string */}
@@ -401,12 +401,12 @@ export default function Home() {
           )}
         </div>
         <div>
-          <img className={styles.image} src="./0.svg" />
+          <img className={styles.image} src="./lambo.jpg" />
         </div>
       </div>
 
       <footer className={styles.footer}>
-        Made with &#10084; by Crypto Devs
+      Fiery Lambo &#128640;&#128640;
       </footer>
     </div>
   );
